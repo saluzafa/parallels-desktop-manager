@@ -1,0 +1,16 @@
+{
+  "name": "parallels-desktop-manager",
+  "main": "main.js",
+  "version": "0.1.0",
+  "devDependencies": {
+    "electron": "^17.1.2"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "build": {
+    "productName": "Parallels Desktop Manager"
+  }
+}
