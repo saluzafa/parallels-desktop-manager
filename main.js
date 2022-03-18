@@ -64,7 +64,7 @@ function refreshMenu() {
                   click: (item, window, event) => {
                     toggleLoadingMenu();
 
-                    execute(`prlctl stop ${vm.name}`).then(() => {
+                    prlctl(`stop ${vm.name}`).then(() => {
                       VMUtils.waitStatus(vm.name, VM_STATUS_STOPPED).then(() => {
                         refreshMenu();
                       });
@@ -81,7 +81,7 @@ function refreshMenu() {
                   click: (item, window, event) => {
                     toggleLoadingMenu();
 
-                    execute(`prlctl start ${vm.name}`).then(() => {
+                    prlctl(`start ${vm.name}`).then(() => {
                       VMUtils.waitStatus(vm.name, VM_STATUS_RUNNING).then(() => {
                         refreshMenu();
                       });
